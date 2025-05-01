@@ -34,3 +34,5 @@ htmlcov/
 
 # Others
 *.log
+
+Makefile
