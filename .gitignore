@@ -36,3 +36,4 @@ htmlcov/
 *.log
 
 Makefile
+task_cli.json
