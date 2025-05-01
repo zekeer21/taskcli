@@ -9,7 +9,7 @@ Follow these steps to install TaskCLI:
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/taskcli.git
+   git clone https://github.com/zekeer21/taskcli.git
    cd taskcli
    ```
 
