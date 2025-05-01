@@ -35,5 +35,5 @@ htmlcov/
 # Others
 *.log
 
-Makefile
+# Ignore local task data
 task_cli.json
