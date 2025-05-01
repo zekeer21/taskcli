@@ -1,1 +1,36 @@
-.venv
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environment
+.venv/
+.env/
+
+# Packaging
+*.egg-info/
+build/
+dist/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# VSCode, PyCharm, etc.
+.vscode/
+.idea/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Test and coverage
+.coverage
+*.cover
+htmlcov/
+.pytest_cache/
+
+# Others
+*.log
