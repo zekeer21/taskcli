@@ -1,39 +1,31 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
-*.pyo
-*.pyd
-*.so
+*$py.class
 
-# Virtual environment
+# Local environment
 .venv/
-.env/
+env/
+venv/
 
-# Packaging
-*.egg-info/
+# Task data (runtime file)
+task_cli.json
+
+# Distribution / packaging
 build/
 dist/
+*.egg-info/
 
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# VSCode, PyCharm, etc.
+# VSCode settings (optional)
 .vscode/
-.idea/
 
-# OS-specific
+# Test cache
+.pytest_cache/
+coverage.*
+
+# System files
 .DS_Store
 Thumbs.db
 
-# Test and coverage
-.coverage
-*.cover
-htmlcov/
-.pytest_cache/
-
-# Others
+# Logs
 *.log
-
-# Ignore local task data
-task_cli.json
