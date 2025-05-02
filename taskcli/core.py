@@ -33,7 +33,7 @@ def add(description):
     task = {
         "id": task_id,
         "desc": description,
-        "created_at": datetime.now().isoformat(),
+        "created_at": datetime.now().strftime("%x %X"),
         "updated_at": None,
         "status": "todo",
     }
@@ -47,7 +47,7 @@ def update(task_id, description):
     for task in data[TASKS_KEY]:
         if task["id"] == task_id:
             task["desc"] = description
-            task["updated_at"] = datetime.now().isoformat()
+            task["updated_at"] = datetime.now().strftime("%x %X")
             _save_data(data)
             print(f"✏️ Task {task_id} updated.")
             return
@@ -59,7 +59,7 @@ def mark(task_id, status):
     for task in data[TASKS_KEY]:
         if task["id"] == task_id:
             task["status"] = status
-            task["updated_at"] = datetime.now().isoformat()
+            task["updated_at"] = datetime.now().strftime("%x %X")
             _save_data(data)
             print(f"🏷️ Task {task_id} marked as {status}.")
             return
@@ -69,13 +69,19 @@ def mark(task_id, status):
 def list_tasks(status=None):
     data = _load_data()
     tasks = data.get(TASKS_KEY, [])
+
     if status:
         tasks = [t for t in tasks if t["status"] == status]
     if not tasks:
         print("📭 No tasks found.")
         return
+    print(
+        """ID     DESCRIPTION     STATUS            CREATED AT              UPDATED AT"""
+    )
     for task in tasks:
-        print(f"[{task['id']}] {task['desc']} ({task['status']})")
+        print(
+            f"[{task['id']}] \t{task['desc']} \t({task['status']}) \t\t{task['created_at']} \t{task['updated_at']}"
+        )
 
 
 def delete(task_id):
